@@ -1,5 +1,5 @@
 Resulté ganador del concurso I Desafío Tecnológico, organizado por el Departamento de Ingeniería de
-Comunicaciones de mi Facultad (https://www.uma.es/etsi-de-telecomunicacion/).
+Comunicaciones de la ETS Ingenieria Telecomunicacion (https://www.uma.es/etsi-de-telecomunicacion/).
 
 # El problema
 El objetivo es comprimir lo máximo posible una imagen de gran tamaño (34,3 MB), con 2 requisitos:
@@ -14,12 +14,14 @@ Usé una mezcla de 2 conceptos :
 * Se puede observar que la imagen original tiene regiones muy amplias con el mismo color o una tonalidad muy parecida.
 Apliqué una **reducción de la paleta de colores**, la cual es configurable al ejecutar el script en MATLAB / Octave.
 
-* Realmente con el paso anterior no se ha comprimido nada aún, pero se ha homogeneizado muchas zonas de la imagen, por lo que apliqué Run Length Encoding (codificación por rachas) a los valores de los píxeles RGB. 
-Por ej AAAAAAAAAA = 10A. Lo segundo se codifica con muchos menos bits.
+* Realmente con el paso anterior no se ha comprimido nada aún, pero se ha homogeneizado muchas zonas de la imagen, por lo que apliqué Run Length Encoding (codificación por rachas) a los valores de los píxeles RGB. Por ej AAAAAAAAAA = 10A. Lo segundo se codifica con muchos menos bits.
 
 Están adjuntas las imágenes resultado con 8, 16, 32, 64, 128 y 256 colores.
 El ratio de compresión logrado fue 10:1 con la máxima pérdida de calidad posible (sin que se algo exagerado a la vista)
 
+El script que realiza la compresión es comprime.m, pasándole como parámetro el número de colores.
+
 
 # Bibliografía consultada
 Digital Image Processing (Rafael González, Richard Woods)
+
